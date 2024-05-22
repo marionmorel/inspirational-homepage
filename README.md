@@ -23,7 +23,7 @@ This is a rough idea of what I want the page to look like.
 ## Features 
 
 - Users can check the current weather
-- sers are shown an inspirational image
+- Users are shown an inspirational image
 - Users can cycle through multiple fetched images
 - Users are shown an inspirational quote
 - Users can write down their goals
