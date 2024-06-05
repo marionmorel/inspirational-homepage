@@ -1,38 +1,202 @@
-.App {
+/* General styles */
+
+html {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
+  background-color: #EADDD7;
+  color: #3F292B;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* Header styles */
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #DBBEA1;
+  width: 95%;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.header h1 {
+  font-family: 'Parisienne', cursive;
   text-align: center;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Container styles */
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  background-color: rgba(163, 123, 115, 0.3);
+  border-radius: 15px;
+  height: 575px;
+  margin: 10px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left {
+  height: 95%;
+  width: 48%;
+  background-color: rgba(163, 123, 115, 0.3);
+  border-radius: 15px;
+  margin: auto 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right {
+  height: 95%;
+  width: 48%;
+  background-color: rgba(163, 123, 115, 0.3);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: auto 10px;
+}
+
+.top {
+  height: 63%;
+  width: 100%;
+  background-color: rgb(163, 123, 115);
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.bottom {
+  height: 35%;
+  width: 100%;
+  background-color: rgb(163, 123, 115);
+  border-radius: 15px;
+}
+
+/* Goals styles */
+
+.goals-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.goal-card,
+.add-goal {
+  width: 40%;
+  height: 150px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-goal textarea {
+  margin: 15px 5px;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(255,255,255,0);
+  border: none;
+  text-align: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 18px;
+}
+
+.buttons {
+  margin: 5px 3px;
+}
+
+.btn {
+  margin: 0 10px;
+  border-radius: 5px;
+  border: none;
+  height: 1.5em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.done {
+  background-color: #8a364c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.remove {
+  background-color: #d34f73;
+}
+
+.add {
+  background-color: #be7085;
+  margin: 7px auto;
+}
+
+.remove:hover,
+.done:hover,
+.add:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Weather styles */
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.weather img {
+  margin-top: 49px;
+}
+
+
+/* Quote styles */
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.quote h3 {
+  font-family: "Parisienne", cursive;
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-bottom: 10px;
+}
+
+.quote p {
+  margin-top: 10px;
+  font-size: 0.7em;
+}
+  
+/* Footer styles */
+
+.footer {
+  height: 2em;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  background-color: #EADDD7;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #56383B;
+}
+
+.footer a:hover {
+  cursor: pointer;
+  color: #88595D;
 }
