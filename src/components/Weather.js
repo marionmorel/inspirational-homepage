@@ -14,7 +14,7 @@ const Weather = () => {
         <div className="weather">
             <p className="location">{city}</p>
             <img
-                src={`http://openweathermap.org/img/wn/${metadata.icon}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${metadata.icon}@2x.png`}
                 alt=""
             />
             <p className="temperature">{Math.round(temperature)} °C</p>
