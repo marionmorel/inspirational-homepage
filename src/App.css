@@ -3,8 +3,8 @@
 html {
   font-family: 'Source Sans 3', sans-serif;
   font-size: 18px;
-  background-color: #EADDD7;
-  color: #3F292B;
+  background-color: #405557;
+  color: white;
 }
 
 html,
@@ -12,15 +12,42 @@ body {
   margin: 0;
 }
 
+i {
+  color: #bcdadca2;
+}
+
+i:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#background-image-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#background-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  min-height: 100%;
+  transform: scale(1.5);
+  filter: brightness(0.5) blur(5px);
+}
+
 /* Header styles */
 
 .header {
   display: flex;
   align-items: center;
-  background-color: #DBBEA1;
   width: 95%;
   height: 80px;
-  margin: 0 auto;
+  margin: 7px auto;
   border-radius: 15px;
 }
 
@@ -28,71 +55,65 @@ body {
   font-family: 'Parisienne', cursive;
   text-align: center;
   margin: auto;
+  color: white;
 }
 
 /* App Container styles */
 
 .app-container {
+  top: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 95%;
-  background-color: rgba(163, 123, 115, 0.3);
+  width: 97%;
+  background-color: rgba(163, 123, 115, 0);
   border-radius: 15px;
   height: 575px;
   margin: 10px auto;
 }
 
-.left {
-  height: 95%;
-  width: 48%;
-  background-color: rgba(163, 123, 115, 0.3);
-  border-radius: 15px;
-  margin: auto 10px;
-}
-
-.right {
-  height: 95%;
-  width: 48%;
-  background-color: rgba(163, 123, 115, 0.3);
-  border-radius: 15px;
+.content-container {
+  width: 97%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: auto 10px;
+  align-content: center;
 }
 
-.top {
-  height: 63%;
-  width: 100%;
-  background-color: rgb(163, 123, 115);
-  border-radius: 15px;
-  margin-bottom: 10px;
-}
-
-.bottom {
-  height: 35%;
-  width: 100%;
-  background-color: rgb(163, 123, 115);
-  border-radius: 15px;
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 10%;
 }
 
 /* Goals styles */
 
 .goals-list {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
+}
+
+.goal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 15px;
 }
 
 .goal-card,
 .add-goal {
-  width: 40%;
-  height: 150px;
+  width: 20%;
+  height: 100px;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #BCDADC46;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -100,8 +121,8 @@ body {
   align-items: center;
 }
 
-.add-goal textarea {
-  margin: 15px 5px;
+.add-goal form {
+  margin: 30px 5px;
   width: 90%;
   height: 80%;
   background-color: rgba(255,255,255,0);
@@ -109,10 +130,6 @@ body {
   text-align: center;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 18px;
-}
-
-.buttons {
-  margin: 5px 3px;
 }
 
 .btn {
@@ -124,15 +141,15 @@ body {
 }
 
 .done {
-  background-color: #8a364c;
+  background-color: #6ebbb0;
 }
 
 .remove {
-  background-color: #d34f73;
+  background-color: #5e8883;
 }
 
 .add {
-  background-color: #be7085;
+  background-color: #9BC1BC;
   margin: 7px auto;
 }
 
@@ -144,6 +161,11 @@ body {
 }
 
 /* Weather styles */
+.left {
+  width: 23%;
+  background-color: #BCDADC46;
+  border-radius: 15px;
+}
 
 .weather {
   display: flex;
@@ -153,12 +175,20 @@ body {
   align-items: center;
 }
 
-.weather img {
-  margin-top: 49px;
+.weather p {
+  margin: 5px auto;
 }
 
+.weather .location {
+  font-weight: bold;
+}
 
 /* Quote styles */
+.right {
+  width: 74%;
+  background-color: #BCDADC46;
+  border-radius: 15px;
+}
 
 .quote {
   display: flex;
@@ -166,13 +196,14 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 .quote h3 {
   font-family: "Parisienne", cursive;
   font-size: 1.5em;
   line-height: 2em;
-  margin-bottom: 10px;
+  margin: 20px 15px;
 }
 
 .quote p {
@@ -188,15 +219,16 @@ body {
   position: fixed;
   bottom: 0px;
   text-align: center;
-  background-color: #EADDD7;
+  background-color: #eaddd700;
+  color: white;
 }
 
 .footer a {
   text-decoration: none;
-  color: #56383B;
+  color: white;
 }
 
 .footer a:hover {
   cursor: pointer;
-  color: #88595D;
+  color: #9BC1BC;
 }
